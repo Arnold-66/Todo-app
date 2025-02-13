@@ -1,0 +1,24 @@
+{% extends 'todo/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+{% if messages %}
+    <div class="alert alert-success">
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endif %}
+<div class="container">
+    <h2 >You have been logged out</h2>
+    <div class="row">
+        <small class="text-muted">
+            <a  href="#" class="ml-2">Log In Again</a>
+        </small>
+    </div>
+</div>
+{% endblock %}
+
+
+
